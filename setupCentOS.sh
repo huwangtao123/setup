@@ -4,7 +4,6 @@
 
 yum update all
 yum install -y -q vim
-yum install -y -q git-core
 
 # git pull and install dotfiles as well
 cd $HOME
@@ -18,3 +17,6 @@ ln -sb dotfiles/.bash_profile .
 ln -sb dotfiles/.bashrc .
 ln -sb dotfiles/.bashrc_custom .
 ln -sb dotfiles/.vimrc .
+
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
